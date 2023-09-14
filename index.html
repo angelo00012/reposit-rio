@@ -2,9 +2,6 @@
 <html lang="pt-br">
   <head>
     <style>
-      html, body{
-        height: 100%;
-      }
       html {
         display: table;
         margin: auto;
@@ -20,16 +17,26 @@
       }
 
       img[data-image = "cachorro"]{
-        border-radius: 20%;
-
+        width: 100%;
+        height: 100%;
       }
 
+      .frame{
+        width: 100%;
+        height: 100%;
+        border: 3px solid #ccc;
+        background: #eee;
+        margin: auto;
+        padding: 15px 10px;
+      }
     </style>
     <title>Título da página</title>
     <meta charset="utf-8">
   </head>
   <body>
     <h1>El bicho</h1>
-    <img src="imagens/cachorro.jpg" data-image = "cachorro"/>
+    <div class = "frame">
+      <img src="imagens/cachorro.jpg" data-image = "cachorro"/>
+    </div>
   </body>
 </html>
