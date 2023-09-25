@@ -40,10 +40,25 @@
         padding-bottom: 10px;
         padding-top: 10px;
       }
-      p{
-        
-        font-size: 40px;
+      .link{
+        color: rgb(255, 120, 120) ;
       }
+      .tabela{
+        vertical-align: center;
+        text-align: center;
+        ::selection{
+          color: goldenrod;
+          background: black;
+        }
+      }
+      p{
+        font-size: 50px;
+        word-wrap: break-word;
+      }
+      ::selection {
+          color: firebrick;
+          background: rgb(198, 198, 198);
+        }
       a{
         color: white;
       }
@@ -59,9 +74,9 @@
     <title>Angelo</title>
 </head>
 <body>
-    <h1>BOM DIA</h1>
-
-    <table>
+    <h1 class = "titulo">BOM DIA</h1>
+    <div class = tabeladiv>
+    <table class = "tabela">
         <tr>
             <td><b> Segunda </b></td>
             <td><b> Terça </b></td>
@@ -78,13 +93,13 @@
             <td> </td>
         </tr>
     </table>
+  </div>
         <br>
-    <p>
-        Olá, é realmente uma dor de ser seguido. Que os mais dignos se agradem apenas com a dor, esse prazer, 
-        com deveres nunca vistos maiores do que o prazer de todas as coisas corruptas, 
-        ou assim acusamos os acusadores!
-    </p>
-    <a href = "exercicio2.html">Lorem ipsum</a>
+        <p>
+            Olá, é realmente uma dor de ser seguido. Que os mais dignos se agradem apenas com a dor, <br> esse prazer, 
+            com deveres nunca vistos maiores do que o prazer de todas as coisas corruptas, <br>
+            ou assim acusamos os acusadores!</p>
+    <a href = "exercicio2.html" class = "link">Lorem ipsum</a>
         <br>
     <img src="C:\Users\ALUNO.ESN890D1247935\Pictures\cicero.png " class = "ciceropng">
         <br>
