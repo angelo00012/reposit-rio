@@ -1,0 +1,17 @@
+Sabendo que um programa fica disponível para receber o ano em que uma pessoa nasceu e calcular a idade
+que ela terá no final do ano, responda: 
+a. Este programa é batch ou online? Por quê?
+ Online. Pois esta tarefa do cálculo exige interatividade com o usuário e acontece imediatamente. ??
+
+b. Este programa tem entradas e saídas? Quais?
+ Entrada: ano em que uma pessoa nasceu.
+ Saída: idade calculada que ela terá no fim do ano.
+
+c. Quais são as prováveis instruções que esse programa tem?
+ declarar a variável do ano, ler o input do usuário, calcular a idade com alguma função e mostrar o output
+da idade para o usuário.
+
+Dados: variável de idade
+Programa: ler o input do usuário e colocar na variável, executar um algoritmo de cálculo com a variável
+mostrar o output na tela.
+Informações: idade do usuário ao fim do ano.
