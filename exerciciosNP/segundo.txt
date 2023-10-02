@@ -1,0 +1,13 @@
+2. Sobre o programa abaixo, responda:
+
+a. O que significa //? Para que serve?
+ Declaração de um comentário no código. Para inutilizar linhas de código ou fazer observações escritas sobre o código.
+
+b. O que acontece se as aspas simples forem trocadas pelas aspas duplas? E se forem misturadas? 
+ Nada. O alerta não funciona.
+
+c. Como fazer para mostrar o conteúdo que o usuário digitou?
+    alert("Hello World");
+    prompt = prompt("Prompt: ");
+    alert(prompt);  
+
