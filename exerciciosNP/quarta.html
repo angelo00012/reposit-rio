@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+
+    <script>
+        //2. escreva um código que receba o nome de dois usuários, inverta-os entre variáveis, e mostre-os na tela.
+
+        var aux = null;
+        var prnome = prompt("Primeiro nome: "); 
+        var senome = prompt("Segundo nome: ");
+
+          function embaralhar(aux, prnome, senome){  
+             aux = prnome;
+             prnome = senome;
+             senome = aux;
+
+             alert("Primeiro nome: " + prnome + " | Segundo nome: " + senome);
+            }
+
+        embaralhar(aux, prnome, senome);
+        
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversão</title>
+</head>
+<body>
+    
+</body>
+</html>
