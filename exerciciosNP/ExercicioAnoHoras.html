@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-image: url("../imagens/payasohopper.png");
+            background-size: 95%;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    </style>
+
+    <script>
+
+        var idadeUsuario = prompt("Digite aqui sua idade: ");
+
+        function calcularIdadeEmAnosParaHoras(idadeUsuario) {
+            let idadeUsuarioEmHoras = idadeUsuario * 8766;
+
+            if (isNaN(idadeUsuario)) {
+                alert("Digite apenas números.")
+            } else
+
+                return idadeUsuarioEmHoras;
+
+        }
+
+        alert("Sua idade em horas aproximadamente: " + calcularIdadeEmAnosParaHoras(idadeUsuario));
+    </script>
+    <title>Ano em horas.</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
