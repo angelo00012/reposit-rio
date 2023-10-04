@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+        display: table;
+        margin: auto;
+        }
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/payasostanczyk.jpg");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: whitesmoke;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 50px;
+
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1980</title>
+    <!-- Faça um programa que, dada a idade do usuário em ano, diga se ele nasceu antes de 1980. -->
+</head>
+<body>
+    <h1>VOCÊ NASCEU ANTES DE 1980?</h1>
+    <div class = "div_global">
+        <div id = "div_principal">
+            <script>
+                var idadeUsuario = prompt("Digite sua idade e descubra se você nasceu antes de 1980: ");
+                var anoAtual = new Date().getFullYear();
+
+                function verificarIdade1980(anoAtual){
+                    var idade1980 = anoAtual - 1980;
+
+                    return idade1980;
+                }
+
+                function verificarIdadeAntesDe1980(idadeUsuario){
+                    var idade1980 = verificarIdade1980(anoAtual);
+
+                    if(idadeUsuario > idade1980){
+
+                        return "SIM";
+
+                    } else
+
+                    return "NÃO";
+                }
+                alert(verificarIdadeAntesDe1980(idadeUsuario));
+                
+                document.getElementById("div_principal").innerHTML = verificarIdadeAntesDe1980(idadeUsuario);
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>

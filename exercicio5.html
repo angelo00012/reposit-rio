@@ -70,7 +70,7 @@
         margin-bottom: 30px;
       }
 
-      .paragrafo{
+      #paragrafo{
         border: 10px black;
         border-top-style: double;
         border-bottom-style: solid;
@@ -120,7 +120,7 @@
         </tr>
     </table>
 
-        <p class = "paragrafo">
+        <p id = "paragrafo">
             Olá, é realmente uma dor de ser seguido. Que os mais dignos se agradem apenas com a dor, esse prazer, 
             com deveres nunca vistos maiores do que o prazer de todas as coisas corruptas,
             ou assim acusamos os acusadores!
@@ -129,5 +129,16 @@
     <img src="C:\Users\ALUNO.ESN890D1247935\Pictures\cicero.png" class = "ciceropng">
     <br>
     <a href = "exercicio2.html" class = "link">Lorem ipsum </a>
+
+    <script>
+      let body = document.getElementById("body");
+
+      window.addEventListener('scroll', function(){
+        var valor = window.scrollY;
+
+        body.style.down = valor * 0.5 + 'px';
+        paragrafo.style.down = valor * 0.5 + 'px';
+      })
+    </script>
 </body>
 </html>

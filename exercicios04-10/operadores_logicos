@@ -1,0 +1,16 @@
+var a = false && false; // (E) a = false
+var b = true && false; // (E) b = false
+var c = true && true; // (E) c = true
+var d = false || false; // (OU) d = false
+var e = true || false; // (OU) e = true
+var f = true || true // (OU) f = true
+
+//MAIS EXEMPLOS
+
+var a = 2 > 1 && 2 > 3; //(E) a = false
+var b = 2 > 1 && 3 > 2; //(E) b = true
+var c = 1 > 2 || 2 > 3; //(OU) c = false
+var d = 2 > 1 || 3 > 2; //(OU) d = true
+
+// MAIS EXEMPLOS
+var e = !(2 > 1); //(NÃO) e = false (o NÃO, '!', inverte o valor booleano)
