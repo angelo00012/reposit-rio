@@ -50,15 +50,15 @@
             <script>
                 var idadeUsuario = prompt("Digite sua idade e descubra se você nasceu antes de 1980: ");
                 var anoAtual = new Date().getFullYear();
-
+/* 
                 function verificarIdade1980(anoAtual){
-                    var idade1980 = anoAtual - 1980;
 
                     return idade1980;
                 }
-
+ */
                 function verificarIdadeAntesDe1980(idadeUsuario){
-                    var idade1980 = verificarIdade1980(anoAtual);
+                    
+                    var idade1980 = anoAtual - 1980;
 
                     if(idadeUsuario > idade1980){
 

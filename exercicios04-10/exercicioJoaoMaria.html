@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/payasostanczyk.jpg");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: whitesmoke;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 20px; 
+            font-size: 50px;
+
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João e Maria</title>
+</head>
+<body>
+    <h1>OLÁ</h1>
+    <div class = "div_global">
+        <div id = "div_principal">
+            <script>
+                // Faça um programa que, dada as entradas com nome e ano de nascimento, responda se o usuário tem entre 18 e 60 e se chama João ou Maria.
+                    var nomeUsuario = prompt("Qual é seu nome?");
+                        let nomeUsuarioLetraMinuscula = nomeUsuario.toLowerCase(); 
+                    var anoNascUsuario = prompt("Qual é o ano de seu nascimento?"); 
+                        var anoAtual = new Date().getFullYear();
+                    var idadeUsuario = anoAtual - anoNascUsuario;
+
+                    function verificaDadosUsuario(nomeUsuario, idadeUsuario){
+
+                        if ((idadeUsuario >= 18 && idadeUsuario <= 60) && (nomeUsuarioLetraMinuscula == "joão" || nomeUsuarioLetraMinuscula == "maria")){
+
+                            return true;
+
+                        } else
+
+                        return false;
+
+                    }
+
+                    function formataNome(nomeUsuario){
+                        var nomeUsuarioInicialMaiuscula = nomeUsuario.charAt(0).toUpperCase() + nomeUsuario.slice(1);
+
+                        return nomeUsuarioInicialMaiuscula;
+                    }
+                    
+                    var mensagem = "Seu nome é " + formataNome(nomeUsuario) + " e você tem " + idadeUsuario + " anos.";
+
+                    if(verificaDadosUsuario(nomeUsuario, idadeUsuario) == true){
+                        alert(mensagem);
+                        document.getElementById("div_principal").innerHTML = mensagem;
+                    } else 
+                    alert("você não é permitido aqui.");
+                   
+            </script>
+        </div>
+    </div>
+</body>
+</html>
