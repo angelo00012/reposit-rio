@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+        display: table;
+        margin: auto;
+        }
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/andre.png");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: whitesmoke;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 50px;
+
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <div class = "div_global">
+        <div id = "div_principal">
+            <script>
+                var peso = prompt("Digite aqui seu peso (kg): ");
+                var altura = prompt("Digite aqui sua altura (m): ");
+
+                var IMC = peso / (altura * altura);
+
+                function categorizarFaixaIMC(IMC){
+                    if (IMC < 18.5) {
+                        return "Abaixo do peso";
+                    } else
+                    if (IMC < 25) {
+                        return "Peso normal";
+                    } else
+                    if (IMC < 30) {
+                        return "Sobrepeso";
+                    } else
+                    if (IMC < 35) {
+                        return "Obesidade grau I";
+                    } else
+                    if (IMC < 40) {
+                        return "Obesidade grau II";
+                    } else 
+                    if (IMC >= 40) {
+                        return "Obesidade grau III";
+                    }
+                }
+
+                var classificacao = categorizarFaixaIMC(IMC);
+                var IMCformatado = IMC.toFixed(2);
+
+                alert("Sua classificação de IMC é: " + classificacao);
+                document.getElementById("div_principal").innerHTML = classificacao + ": " + IMCformatado;
+            </script>
+        </div>
+    </div>
+</body>
+</html>
