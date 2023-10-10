@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/andre.png");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: whitesmoke;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 50px;
+
+        }
+        #div_informacoes{
+            justify-content: start;
+            align-items: center;
+        }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placas e componentes</title>
+</head>
+<body>
+    <div class = "div_global">
+        <div id = "div_principal">
+            <div id = "div_informacoes">
+                A: <span id = "componentes_A"></span>
+                B: <span id = "componentes_B"></span>
+                C: <span id = "componentes_C"></span>
+                Placas possíveis: <span id = "placas"></span>
+            </div>
+            <script>
+                var quantidadeCompA = prompt("Digite aqui a quantidade de componentes A: ");
+                var quantidadeCompB = prompt("Digite aqui a quantidade de componentes B: ");
+                var quantidadeCompC = prompt("Digite aqui a quantidade de componentes C: ");
+
+                 function verificarComponentes(quantidadeCompA, quantidadeCompB, quantidadeCompC){
+                    var conjuntoAnecessarios = quantidadeCompA / 2;
+                    var conjuntoBNecessarios = quantidadeCompB / 3;
+                    var conjuntoCNecessarios = quantidadeCompC / 7;
+                        var componentesNecessarios = Math.min(conjuntoAnecessarios, conjuntoBNecessarios, conjuntoCNecessarios);
+
+                        return Math.floor(componentesNecessarios);
+                 }
+
+                var placasPossiveis = verificarComponentes(quantidadeCompA, quantidadeCompB, quantidadeCompC);
+
+                alert(placasPossiveis);
+
+                    document.getElementById("componentes_A").innerHTML = quantidadeCompA;
+                    document.getElementById("componentes_B").innerHTML = quantidadeCompB;
+                    document.getElementById("componentes_C").innerHTML = quantidadeCompC; 
+                    document.getElementById("placas").innerHTML = placasPossiveis; 
+            </script>
+        </div>
+    </div>
+</body>
+</html>
