@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/niclascage.png");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: whitesmoke;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 50px;
+
+        }
+
+    </style>
+
+    <!-- Um banco precisa que cada cliente tenha uma senha de 4 dígitos, sendo que todos dígitos devem ser diferentes de 0. -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senhas do Banco</title>
+</head>
+<body>
+    <div class = "div_global">
+        <div id = "div_principal">
+            <script type = "text/javascript">
+                var senhaUsuario = prompt("Crie uma senha para sua conta bancária: ");
+                var valido = true;
+
+                var senhaValidacao = senhaUsuario;
+
+                var digitosSenha = senhaValidacao.length;
+                    valido = (((senhaValidacao % 10) >= 1)) && (digitosSenha == 4);
+                senhaValidacao = senhaValidacao / 10;
+                    valido = (senhaValidacao % 10) >= 1 && valido == true;
+                senhaValidacao = senhaValidacao / 10;
+                    valido = (senhaValidacao % 10) >= 1 && valido == true;
+                senhaValidacao = senhaValidacao / 10;
+                    valido = (senhaValidacao % 10) >= 1 && valido == true;
+
+                if(valido) {
+                    alert("Senha cadastrada com sucesso.");
+                    document.getElementById("div_principal").innerHTML =  " Cadastrado com sucesso: " + senhaUsuario;
+                } else {
+                    alert("Senha inválida.")
+                    document.getElementById("div_principal").innerHTML = " Senha inválida: " + senhaUsuario;
+                }
+
+            </script>
+        </div>
+</body>
+</html>
