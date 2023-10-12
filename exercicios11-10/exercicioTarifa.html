@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/choris.png");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: whitesmoke;
+            -webkit-text-stroke: 3px black;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 70px;
+
+        }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifa</title>
+</head>
+<body>
+
+    <!-- A prefeitura de uma cidade calcula a base das tarifas de fornecimento de água de acordo com as faixas de consumo abaixo. Após calculado o 
+    valor base, a prefeitura dá um desconto de 5% para os valores até R$100,00 e cobra um acréscimo de 10% para os valores acima de R$200,00.
+    Faça um programa para calcular a cobrança dado o consumo em m³.
+    - Até 20m³ = R$1,60 por m³
+    - De 21 a 50m³ = R$2,80 por m³
+    - Acima de 50m³ = R$4,20 por m³ -->
+
+    <div class = "div_global">
+        <div id = "div_principal">
+            <script type = "text/javascript">
+                var m3 = prompt("Digite quantos m³ de água você consumiu: ");
+                var tarifa = 0;
+
+                function calcularValorBase(m3){
+                    if(m3 <= 20){
+                        return m3 * 1.60;
+
+                    } else if (m3 >= 21 && m3 <= 50){
+                        return m3 * 2.80;
+
+                    } else {
+                        return m3 * 4.20;
+                    }
+                }
+
+                function descontarValor(valorBase){
+                    if(valorBase <= 100){
+                        return valorBase = valorBase - (valorBase * 0.05);
+
+                    } else if (valorBase > 200){
+                        return valorBase = valorBase + (valorBase * 0.10);
+
+                    } else {
+                        return valorBase;
+
+                    }
+                }
+
+                valorBase = calcularValorBase(m3);
+
+                tarifa = descontarValor(valorBase);
+                tarifaFormatada = tarifa.toLocaleString('pt-BR');
+
+                document.getElementById("div_principal").innerHTML = "Tarifa: R$" + tarifaFormatada;
+
+            </script>
+        </div>
+</body>
+</html>
