@@ -46,11 +46,29 @@
 <body>
     <div class = "div_global">
         <div id = "div_principal">
-            <script>
+            <script>   
+              
+               do {
                 var peso = prompt("Digite aqui seu peso (kg): ");
                 var altura = prompt("Digite aqui sua altura (m): ");
 
                 var IMC = peso / (altura * altura);
+
+                var classificacao = categorizarFaixaIMC(IMC);
+                var IMCformatado = IMC.toFixed(2);
+
+                alert("Sua classificação de IMC é: " + classificacao);
+                document.getElementById("div_principal").innerHTML = classificacao + ": " + IMCformatado;
+
+                var usuarioResposta = prompt("deseja continuar com o programa? ");
+                    if(usuarioResposta == 'não'){
+                        var valido = false;
+                    } else if (usuarioResposta == 'sim'){
+                        var valido = true;
+                    }
+                
+                } while (valido);
+                 
 
                 function categorizarFaixaIMC(IMC){
                     if (IMC < 18.5) {
@@ -72,13 +90,10 @@
                         return "Obesidade grau III";
                     }
                 }
-
-                var classificacao = categorizarFaixaIMC(IMC);
-                var IMCformatado = IMC.toFixed(2);
-
-                alert("Sua classificação de IMC é: " + classificacao);
-                document.getElementById("div_principal").innerHTML = classificacao + ": " + IMCformatado;
             </script>
+
+            <!-- Utilizando o programa de IMC feito em aulas anteriores, permita o usuário continuar fazendo cálculos enquanto a resposta 
+                for diferente de "não" -->
         </div>
     </div>
 </body>

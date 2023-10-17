@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/segundaa.png");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: whitesmoke;
+            -webkit-text-stroke: 3px black;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 70px;
+
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+
+    <!-- Faça um script que receba um número e mostre a sua tabuada. Mostre a tabuada utilizando console.log -->
+    <div class = "div_global">
+        <div id = "div_principal">
+            <script type = "text/javascript">
+                var numeroUsuario = prompt("digite um número para mostrar sua tabuada: ")
+
+                    for(let index = 1; index <= 10; index++) {
+                        console.log(numeroUsuario + " x " + index + " = " +  numeroUsuario * index);
+
+                    }
+            </script>
+        </div>
+</body>
+</html>
