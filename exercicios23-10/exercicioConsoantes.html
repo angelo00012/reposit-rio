@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/aran.jpg");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: whitesmoke;
+            -webkit-text-stroke: 3px black;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 70px;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consoantes?</title>
+</head>
+<body>
+    <!-- Faça um programa que leia um vetor de 10 caracteres, e diga quantas consoantes foram lidas. Imprima a quantidade de consoantes.
+    Etapa 1: declarar Array e Contador de consoantes
+    Etapa 2: Entrada de dados no Array
+    Etapa 3: Passar pelo array e verificar se o valor é uma consoante
+    Etapa 4: Exibir quantidade -->
+
+    <div class = "div_global">
+        <div id = "div_principal">
+            <script type = "text/javascript">
+               var arrayCaracteres = new Array();
+               var contadorConsoantes = 0;
+
+               while (arrayCaracteres.length < 10){
+                var caractereUsuario = prompt("Digite um caractere a ser armazenado: ");
+                arrayCaracteres.push(caractereUsuario);
+
+               }
+
+               for(index = 0; index < arrayCaracteres.length; index++){
+                console.log(`${index + 1}. ` + arrayCaracteres[index]);
+
+                     if(arrayCaracteres[index] != 'a' && 
+                        arrayCaracteres[index] != 'e' && 
+                        arrayCaracteres[index] != 'i' &&
+                        arrayCaracteres[index] != 'o' && 
+                        arrayCaracteres[index] != 'u') {
+                            
+                            contadorConsoantes++;
+
+                        }
+
+                }
+
+               console.log("Consoantes no total: " + contadorConsoantes);
+
+            </script>
+        </div>
+</body>
+</html>
