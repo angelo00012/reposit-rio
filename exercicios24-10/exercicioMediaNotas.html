@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/aran.jpg");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: whitesmoke;
+            -webkit-text-stroke: 3px black;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 70px;
+
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mmmmmmmmmmmm</title>
+</head>
+    <!-- Faça um programa que leia X notas, mostre as notas e a média na tela.
+        -X deve ser definido pelo usuário.
+        - var x = parseInt(prompt('Digite o tamanho do array'));
+        - Programa deve funcionar caso o número de notas mude
+        - Utilizar 2 loops for
+            - For 1: Digitar os valores do array
+            - For 2: Somar os itens a variável valorTotal -->
+<body>
+    <div class = "div_global">
+        <div id = "div_principal">
+            <script type = "text/javascript">
+                var notasVetor = new Array();
+                var numeroNotas = parseInt(prompt('Digite o tamanho do array: '));
+                var valorTotal = 0;
+
+                for(i = 0; i < numeroNotas; i++){
+                    numeroUsuario = parseInt(prompt('Digite uma nota: '));
+                    notasVetor.push(numeroUsuario);
+
+                }
+
+                for(i = 0; i < notasVetor.length; i++){
+                    console.log(notasVetor[i]);
+
+                }
+
+                notasVetor.forEach(numero => {
+                    valorTotal += numero;
+                    }
+                )
+
+                let mediaNotas = valorTotal / numeroNotas;
+
+                alert("Média das notas: " + mediaNotas);
+
+                document.getElementById("div_principal").innerHTML = "Média das notas: " + mediaNotas;
+            </script>
+        </div>
+    </div>
+</body>
+</html>
