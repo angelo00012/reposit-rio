@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/giphy.gif");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: whitesmoke;
+            -webkit-text-stroke: 3px black;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 70px;
+
+        }
+        #div_numeros{
+            width: 90%;
+            margin: 20px;   
+        }
+        #div_numeros_inteiros::after{
+            content: "\a";
+            white-space: pre;
+        }
+        #div_numeros_pares::after{
+            content: "\a";
+            white-space: pre;
+        }
+        #div_numeros_impares::after{
+            content: "\a";
+            white-space: pre;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par Ímpar</title>
+</head>
+<body>
+    <!-- Faça um programa que leia 20 números inteiros e armazene-os num vetor.
+    Armazene os números pares do vetor PAR e os números IMPARES no vetor impar.
+    Imprima os três vetores
+    *ParseInt no prompt pois utilizaremos numero como tipo numero -->
+    <div class = "div_global">
+        <div id = "div_principal">
+            <div id = "div_numeros">
+                Números inteiros: <span id = "div_numeros_inteiros"> </span>
+                Números pares: <span id = "div_numeros_pares"> </span>
+                Números ímpares: <span id = "div_numeros_impares"> </span>
+
+            <script type = "text/javascript">
+                var arrayNumerosInteiros = new Array();
+                var arrayNumerosPares = new Array();
+                var arrayNumerosImpares = new Array();
+                let index = 0;
+
+                while (arrayNumerosInteiros.length < 20){
+                    index++;
+                    var numeroUsuario = parseInt(prompt(`Digite o ${index}º número`));
+                    arrayNumerosInteiros.push(numeroUsuario);
+
+                    if(calcularNumeroPar(numeroUsuario) == true){
+                        arrayNumerosPares.push(numeroUsuario);
+
+                    } else {
+                        arrayNumerosImpares.push(numeroUsuario);
+
+                    }
+
+                }
+
+                /* for(i = 0; i < arrayNumerosInteiros.length; i++){
+                    console.log("Inteiro: " + arrayNumerosInteiros[i]);
+
+                }
+                for(i = 0; i < arrayNumerosPares.length; i++){
+                    console.log("Par: " + arrayNumerosPares[i]);
+
+                }
+                for(i = 0; i < arrayNumerosImpares.length; i++){
+                    console.log("Impar: " + arrayNumerosImpares[i]);
+
+                } */
+
+                console.log("Números inteiros: " + arrayNumerosInteiros);
+                console.log("Números pares: " + arrayNumerosPares);
+                console.log("Números ímpares: " + arrayNumerosImpares);
+
+                function calcularNumeroPar(numeroUsuario){
+                    var par = (numeroUsuario % 2 == 0); 
+
+                    return par;
+                }
+
+                document.getElementById("div_numeros_inteiros").innerHTML = arrayNumerosInteiros;
+                document.getElementById("div_numeros_pares").innerHTML = arrayNumerosPares;
+                document.getElementById("div_numeros_impares").innerHTML = arrayNumerosImpares;
+           </script> 
+           </div>
+        </div>
+    </div>
+</body>
+</html>

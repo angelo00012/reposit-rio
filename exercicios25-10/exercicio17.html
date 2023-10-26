@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        //declarações de vetores que armazenarão números: 
+        //no total
+        let numeros = [];
+        //pares
+        let pares = [];
+        //e ímpares
+        let impares = [];
+
+        //loop for que irá rodar 20 vezes, armazenando 20 números no vetor de números
+        for (let i = 0; i < 20; i++) {
+            //variável numero que recebe de um input do usuário o número a ser armazenado
+            let numero = parseInt(prompt("Digite um número inteiro:"));
+            //a variável que o usuário mandou é inserida no vetor de números
+            numeros.push(numero);
+
+            //estrutura condicional if que checa se a variável número é par ou não
+            //a variável número é divida por 2 repetidamente, se não restar nada, o número é par (retornando true)
+            if (numero % 2 === 0) {
+                //a variável é inserida no vetor de números pares
+                pares.push(numero);
+            } else {
+                //a variável é inserida no vetor de números ímpares
+                impares.push(numero);
+            }
+        }
+
+        //os valores dos vetores são catalogados no console do navegador, antecedidos por strings anunciando o tipo dos vetores
+        //log do vetor de números no total
+        console.log("Números: ", numeros);
+        //log do vetor de números pares
+        console.log("Pares: ", pares);
+        //log do vetor de números ímpares
+        console.log("Ímpares: ", impares);
+    </script>
+</body>
+</html>

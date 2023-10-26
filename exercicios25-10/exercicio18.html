@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        //declaração do vetor a
+        let a = [];
+        //declaração da variável b
+        let b = 0;
+        //declaração da variável c
+        let c = 1;
+
+        //declaração da variável d, que receberá do usuário um valor pertinente ao vetor
+        let d = parseInt(prompt("Digite o d do array:"));
+
+        //loop for que rodará pelo número de vezes que foi definido pelo usuário através da variável d
+        for (let i = 0; i < d; i++) {
+            //variável numero que receberá um valor numérico do usuário pelo prompt do navegador
+            let numero = parseInt(prompt("Digite um número inteiro:"));
+            //a variável numero é inserida no vetor a
+            a.push(numero);
+
+            //o número entregue pelo usuário é adicionado à variável b continuamente a cada loop, estacando em um valor total no fim do processo
+            b += numero;
+            //o número entregue pelo usuário é multiplicado pelo valor da variável c continuamente a cada loop, estacando em um valor no fim do processo
+            c *= numero;
+        }
+
+        //log dos valores trabalhados até agora
+        //variável b
+        console.log("A b dos números é: " + b);
+        //variável c
+        console.log("A c dos números é: " + c);
+        //vetor a
+        console.log("Os a digitados são: " + a);
+    </script>
+</body>
+</html>
