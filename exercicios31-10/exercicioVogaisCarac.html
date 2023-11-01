@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/saci.png");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: whitesmoke;
+            -webkit-text-stroke: 3px black;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        .div_global{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div_principal{
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 70px;
+
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+<!-- Escreva uma função que permita contar o número de vogais contidas em uma string fornecida pelo usuário.
+      Por exemplo, o usuário informa a string "Beterraba", e a função retorna o número 4 (há 4 vogais nessa palavra). 
+     Escreva uma função em JavaScript que conte quantas vezes um caractere aparece um uma string.
+      Tanto o caractere quanto a string devem ser fornecidos pelo usuário.-->
+<body>
+    <script type = "text/javascript">
+        var palavraUsuario = prompt("Digite uma palavra: ");
+        var contagemVogais = 0;
+
+        function contarVogaisEmString(palavraUsuario){
+
+            for(i = 0; i < palavraUsuario.length; i++){
+
+                if(palavraUsuario.charAt(i) == "a" ||
+                palavraUsuario.charAt(i) == "e" ||
+                palavraUsuario.charAt(i) == "i" ||
+                palavraUsuario.charAt(i) == "o" ||
+                palavraUsuario.charAt(i) == "u" ){
+                    contagemVogais++;
+
+                }
+            
+            }
+            return contagemVogais;
+        }
+        alert("número de vogais: " + contarVogaisEmString(palavraUsuario));
+
+    </script>
+</body>
+</html>
