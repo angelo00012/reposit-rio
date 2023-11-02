@@ -43,7 +43,7 @@
         </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
+    <title>‎ </title>
 </head>
 <!-- Escreva uma função que permita contar o número de vogais contidas em uma string fornecida pelo usuário.
       Por exemplo, o usuário informa a string "Beterraba", e a função retorna o número 4 (há 4 vogais nessa palavra). 
@@ -51,11 +51,29 @@
       Tanto o caractere quanto a string devem ser fornecidos pelo usuário.-->
 <body>
     <script type = "text/javascript">
-        var palavraUsuario = prompt("Digite uma palavra: ");
+        
         var contagemVogais = 0;
+        var contagemCaractere = 0;
+
+        var indexEscolha = parseInt(prompt("1- Contar vogais na palavra \n 2- Contar letra"));
+
+        switch (indexEscolha){
+            case 1: 
+                var palavraUsuario = prompt("Digite uma palavra: ");
+                contarVogaisEmString(palavraUsuario);
+                alert("número de vogais: " + contagemVogais);
+
+                break;
+            case 2:
+                var palavraUsuario = prompt("Digite uma palavra: ");
+                contarIncidenciaCaractere(palavraUsuario);
+
+                break;
+                }
+        
 
         function contarVogaisEmString(palavraUsuario){
-
+            
             for(i = 0; i < palavraUsuario.length; i++){
 
                 if(palavraUsuario.charAt(i) == "a" ||
@@ -66,7 +84,6 @@
                     contagemVogais++;
 
                 }
-            
             }
             return contagemVogais;
         }
@@ -74,10 +91,14 @@
         function contarIncidenciaCaractere(palavraUsuario){
             caractereUsuario = prompt("Digite a letra a ser contada: ");
 
-            
+            for(i = 0; i < palavraUsuario.length; i++){
+                if(palavraUsuario[i] === caractereUsuario){
+                    contagemCaractere++;
+                }
+            }
+            alert(`"${caractereUsuario}" apareceu ${contagemCaractere} vezes na palavra ${palavraUsuario}`);
         }
-
-        alert("número de vogais: " + contarVogaisEmString(palavraUsuario));
+        
 
     </script>
 </body>
