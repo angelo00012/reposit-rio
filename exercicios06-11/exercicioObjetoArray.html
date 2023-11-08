@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            
+            display: table-cell;
+            vertical-align: middle;
+            background-image: url("../imagens/saci.png");
+            background-size: 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: whitesmoke;
+            -webkit-text-stroke: 3px black;
+        }
+
+        h1{
+            font-size: 100px;
+        }
+
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>‎</title>
+    <!-- Crie uma função que receba um objeto e insira esse objeto em um array. Ao digitar o último campo o usuário deve ser perguntado se deseja inserir
+        outro endereço ou não.
+        Caso a resposta seja s, ele deve poder inserir outro endereço, do contrário o programa deve ser finalizado e deve exibir o array com objetos. -->
+</head>
+<body>
+    <script type = "text/javascript">
+        
+        var arrayEnderecos = new Array();
+
+        do{
+            var validacao;
+
+            var endereco = {
+            rua: "Av do CPA",
+            numero: 1234, 
+            bairro: "Jardim Cuiabá",
+            cidade: "Cuiabá",
+            uf: "MT"
+        }
+            
+        endereco.rua = prompt('Endereço da rua:');
+        endereco.numero = prompt('Número:');
+        endereco.bairro = prompt('Bairro: ');
+        endereco.cidade = prompt('Cidade:');
+        endereco.uf = prompt('UF:');
+
+        arrayEnderecos.push(endereco);
+
+        resposta = prompt('Deseja continuar? ');
+            if(resposta == "n"){
+                validacao = false;
+            } else if (resposta == "s"){
+                validacao = true;
+            }
+
+            console.log(arrayEnderecos);
+    } while (validacao);
+
+    </script>
+</body>
+</html>

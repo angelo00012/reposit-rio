@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <style>
+    html {
+        display: table;
+        margin: auto;
+    }
+
+    body {
+        
+        display: table-cell;
+        vertical-align: middle;
+        background-image: url("../imagens/saci.png");
+        background-size: 100%;
+        background-attachment: fixed;
+        background-position: center;
+
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        color: whitesmoke;
+        -webkit-text-stroke: 3px black;
+    }
+
+    h1{
+        font-size: 100px;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>‎</title>
+</head>
+    <!-- Escreva uma função que retorne o seguinte resultado:
+        O X possui as habilidades: Javascript, ReactJS
+        O Y possui as habilidades: PHP, Ruby on Rails, Laravel -->
+<body>
+    <script type = "text/javascript">
+        /* var arrayUsuarios = new Array(); */
+
+        var validacaoHabilidades = true;
+        var usuarios = [{
+            nome: null,
+            habilidades: []
+        }];
+
+        var validacaoUsuario = true;
+        do  {
+            let resposta = prompt("deseja adicionar um usuário?");
+
+            usuario = {
+                nome: null,
+                habilidades: []
+            }
+
+            switch(resposta) {
+                case "n": validacaoUsuario = false;
+                    break;
+                case "s": adicionarUsuario();
+                    break;
+            }
+
+        }while(validacaoUsuario)
+
+        function adicionarUsuario(){
+            usuario.nome = prompt("Nome do usuário: ");
+                adicionarHabilidades();
+
+            usuarios.push(usuario);
+
+            validacaoHabilidades = true;
+
+        }
+
+        function adicionarHabilidades(){
+            do {
+                let usuarioHabilidade = prompt("Habilidade: ");
+
+                if(usuarioHabilidade == null || usuarioHabilidade.length === 0){
+                    validacaoHabilidades = false;
+                }
+
+                usuario.habilidades.push(usuarioHabilidade);
+            }
+            while(validacaoHabilidades)  
+        }
+
+
+        let output = "";
+
+        function listarHabilidades(){
+            for (index = 1; index < usuarios.length; index++){
+                output += `${usuarios[index].nome} tem as habilidades: ` + usuarios[index].habilidades.toString() + "\n";
+            }
+            
+           return output;
+        }
+        
+        console.log(listarHabilidades());  
+    </script>
+</body>
+</html>
