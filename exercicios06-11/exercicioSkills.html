@@ -39,8 +39,17 @@
 
         var validacaoHabilidades = true;
         var usuarios = [{
+<<<<<<< HEAD
             nome: null,
             habilidades: []
+=======
+            nome: "Larry",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+            nome: "Delaton",
+            habilidades: ["PHP", "Ruby on Rails", "Laravel"]
+>>>>>>> 3174219c452bacd7caa5c4f2d93c3c28f1725b59
         }];
 
         var validacaoUsuario = true;
@@ -48,7 +57,11 @@
             let resposta = prompt("deseja adicionar um usuário?");
 
             usuario = {
+<<<<<<< HEAD
                 nome: null,
+=======
+                nome: "",
+>>>>>>> 3174219c452bacd7caa5c4f2d93c3c28f1725b59
                 habilidades: []
             }
 
@@ -75,7 +88,11 @@
             do {
                 let usuarioHabilidade = prompt("Habilidade: ");
 
+<<<<<<< HEAD
                 if(usuarioHabilidade == null || usuarioHabilidade.length === 0){
+=======
+                if(usuarioHabilidade == null){
+>>>>>>> 3174219c452bacd7caa5c4f2d93c3c28f1725b59
                     validacaoHabilidades = false;
                 }
 
@@ -84,6 +101,7 @@
             while(validacaoHabilidades)  
         }
 
+<<<<<<< HEAD
 
         let output = "";
 
@@ -96,6 +114,14 @@
         }
         
         console.log(listarHabilidades());  
+=======
+        let listagemUsuario = "";
+        for (let usuario of usuarios){
+            listagemUsuario += usuario + "<br>";
+        }
+        
+        console.log(listagemUsuario);  
+>>>>>>> 3174219c452bacd7caa5c4f2d93c3c28f1725b59
     </script>
 </body>
 </html>
